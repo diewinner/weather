@@ -1,0 +1,40 @@
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin column($gap: 0) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin row($gap: 0) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+
+@mixin isDisabled($color:transparent) {
+  background-color: $color;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@mixin headingText($color:var(--heading-text),$fz:20px,$fw:400) {
+  color:$color;
+  font-feature-settings:
+          'clig' off,
+          'liga' off;
+  font-size: $fz;
+  font-weight: $fw;
+}
+
+@mixin card() {
+  background: var(--white-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-m);
+  box-shadow: 4px 0 36px 0 var(--box-shadow-color-card);
+  padding: 20px;
+}

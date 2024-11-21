@@ -1,0 +1,13 @@
+:root {
+    /* size */
+    --border-radius-xs: 4px;
+    --border-radius-s: 6px;
+    --border-radius-m: 10px;
+
+    /* other */
+    --transition-base: all 0.3s ease;
+
+    --font-size-xs: 16px;
+    --font-size-s: 18px;
+    --font-size-m: 21px;
+}
