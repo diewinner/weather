@@ -1,75 +1,78 @@
-# Nuxt Minimal Starter
+# Погода онлайн
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Описание
 
-## Setup
+Погода онлайн — это приложение для прогноза погоды, которое позволяет пользователям получать актуальную информацию о погоде для различных городов. Приложение использует API Open-Meteo для получения данных о погоде и отображает их в удобном формате.
 
-Make sure to install dependencies:
+## Установка
 
-```bash
-# npm
-npm install
+1. **Клонирование репозитория**:
+   ```bash
+   git clone https://github.com/diewinner/weather.git
 
-# pnpm
-pnpm install
+2. **Установка зависимостей**:
+   cd weather
+   npm install
 
-# yarn
-yarn install
+## Использование
+1. **Запуск приложения**:
+   ```npm run dev
+   localhost:3000
 
-# bun
-bun install
-```
+## Функциональность
+Прогноз погоды: Получение прогноза погоды на неделю вперед.
+Поддержка различных городов: Возможность выбора города для получения прогноза погоды.
+Отображение данных: Отображение температуры, влажности, скорости ветра и других погодных параметров.
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Структура проекта
+weather/
+├── assets/
+│   ├── content/
+│       ├── navMenuContent.ts
+│   ├── fonts/
+│       ├── Abel-Regular.ttf
+│   ├── js/
+│       ├── helpers.ts
+│   └── style/
+│       ├── vars/
+│           ├── colors.css
+│           ├── index.css
+│           ├── other.css
+│       ├── _animations.scss
+│       ├── fonts.scss
+│       ├── other.scss
+│       ├── reset.css
+│       └── mixins.scss
+├── components/
+│       ├── header/
+│           ├── Logo.vue
+│           ├── NavMenu.vue
+│   ├── Prelaoder.vue
+│   ├── CustomSelect.vue
+│   └── Card.vue
+├── layouts/
+│   └── default.vue
+├── pages/
+│   ├── index.vue
+│   └── weather-of-week.vue
+├── static/
+│   ├── citySvg.svg
+│   ├── dateSvg.svg
+│   ├── loader.svg
+│   ├── precipitationProbabilityMeanSvg.svg
+│   ├── precipitationSumSvg.svg
+│   ├── precipitationSvg.svg
+│   ├── temperatureSvg.svg
+│   ├── temperatureMax.svg
+│   ├── weatherAppLogo.svg
+│   ├── windSpeedSvg.svg
+│   └── temperatureMin.svg
+├── store/
+│   └── modules/
+│       ├── API.ts
+│       ├── index.ts
+│       ├── IS_LOADING.ts
+├── app.vue
+├── nuxt.config.ts
+├── package.json
+└── README.md
